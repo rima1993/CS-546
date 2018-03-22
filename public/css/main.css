@@ -1,0 +1,689 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
+
+.m1{
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;  
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+#Sign_up_form
+{
+    margin: auto;
+    width: 300px;
+    border: 20px solid royalblue;
+    padding: 25px;
+    padding-top: 0px;
+    background-color: #d9d9d9;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    z-index: 1;
+    border-radius: 10px;
+}
+#login_form
+{
+    margin: auto;
+    width: 250px;
+    border: 25px solid royalblue;
+    padding: 25px;
+    padding-top: 0px;
+    background-color: #d9d9d9;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    z-index: 1;
+    border-radius: 10px;
+    position: relative;
+}
+#signup_button,#login_button
+{
+    border: 0px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    height: 36px;
+    padding: 0 8px;
+    background: royalblue;
+
+}
+#login_button:hover,#login_button:active,#login_button:focus {
+    border: 0px;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    background: cadetblue;
+
+}
+#signup_button:hover,#signup_button:active,#signup_button:focus {
+    border: 0px;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    background: cadetblue;
+
+}
+
+#fn,#pwd,#em,#ln,#cp,#cn,#un,#zc
+{
+    height: 24px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    padding:  3px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+h2
+{
+    font-weight: bolder;
+    text-align: center;
+    font-size: 2.0em;
+    padding-top: 0px;
+    color: darkblue;
+}
+
+h1
+{
+    margin: 50px 0px;
+    position: relative;
+    font-weight: 200;
+    text-align: center;
+    font-size: 3.0em;
+    padding-top: 0px;
+    font-weight: bold;
+    color: cornflowerblue;
+}
+#footer_text
+{
+    text-align: center;
+    font-size: 1.0em;
+    color: darkblue;
+    position: fixed;
+
+    bottom: 10px;
+    width: 100%;
+
+    /*  text-align: center;
+    font-size: 1.0em;
+    color: darkblue;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; */
+}
+
+
+section
+{
+    color:darkblue;
+}
+
+.vendor_info
+{
+    float: right;
+    margin-top: 0px;
+}
+
+#profile_table
+{
+    margin-left: 450px;
+    margin-top: 100px;
+    width: 350px;
+    border: 25px solid royalblue;
+    padding: 25px;
+    padding-top: 0px;
+    background-color: #d9d9d9;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    z-index: 1;
+    border-radius: 10px;
+}
+#data_table,#data_table_e{
+    width: auto;
+    margin: auto;  
+    border-spacing: 2px;
+    
+}
+
+
+td, th{
+padding: 5px;
+
+
+}
+
+#table-heading
+{
+    background-color: royalblue;
+    color:white;
+}
+
+#table-entry
+{
+    background-color: silver;
+}
+
+#add_item
+{
+    border: 0px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    height: 36px;
+    padding: 0 8px;
+    background: royalblue;
+}
+
+.pList_menu{
+    float:right;
+}
+
+#add_item:hover,#add_item:active,#add_item:focus
+{
+    border: 0px;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    background: cadetblue;
+}
+
+#error
+{
+    color:red;
+    font-size: smaller;
+    text-align: center;
+}
+#vValue
+{
+    font-size: 100%;
+}
+.e_details
+{
+    background:none!important;
+    color:inherit;
+    border:none;
+    padding:0!important;
+    font: inherit;
+    border-bottom:1px solid #444;
+    cursor: pointer;
+
+}
+.e_details_left
+{
+    background:none!important;
+    color:inherit;
+    border:none;
+    padding:0!important;
+    font: inherit;
+    border-bottom:1px solid #444;
+    cursor: pointer;
+   float: left;
+
+}
+
+.e_details_right
+{
+    float: right;
+    background:none!important;
+    color:inherit;
+    border:none;
+    padding:0!important;
+    font: inherit;
+    /* border-bottom:1px solid #444; */
+    cursor: pointer;
+
+}
+.inputText_d
+{
+    background:rgba(0,0,0,0);
+    /* text-overflow: ellipsis; */
+    border:none;
+    /* overflow: scroll; */
+}
+
+.inputText_d_e
+{
+    background:rgba(0,0,0,0);
+    border:none;
+    font-size: medium;
+}
+.inputTextArea_d_e{
+    width: 100%;
+    background:rgba(0,0,0,0);
+    border:none;
+    font-size: medium;
+    
+}
+
+.inputText_d_description
+{
+    background:rgba(0,0,0,0);
+    /* text-overflow: unset;  */
+    border:none;
+    /* overflow: visible; */
+    font-size: medium;
+
+    /* width: 75%; */
+    display:inline-block;
+
+}
+#profile_table{
+    margin : auto;
+}
+#estimator_info
+{
+    border: 5px solid royalblue;
+    padding: 10px;
+    background-color: #d9d9d9;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    z-index: 1;
+    border-radius: 7px;
+    color: darkslategray;
+    margin: auto;
+    width: 30%;
+    font-size: larger;
+    /* padding: 10px; */
+}
+.list
+{
+    margin: auto;
+    width: 250px;
+    border: 25px solid royalblue;
+    padding-top: 0px;
+    padding-left: 5px;
+    background-color: #d9d9d9;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    z-index: 1;
+    border-radius: 7px;
+    color: darkslategray;
+    position: relative;
+    
+}
+
+.projectl1
+{
+    background:none!important;
+    color:inherit;
+    border:none;
+    padding:0!important;
+    font: inherit;
+    cursor: pointer;
+    color:midnightblue;
+    font-weight: bold;
+    max-width: 210px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   
+}
+
+.project_list
+{
+    font-style: normal;
+    font-weight: bold;
+    font-size: larger;
+    color: midnightblue;
+    margin: 27%;  
+}
+.addprojects{
+    position: absolute;
+}
+
+.projectlistbutton{
+
+    border: none;
+    color: #fff;
+    /* text-shadow: 0 1px rgba(197, 51, 51, 0.1); */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 98%;
+    margin: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    height: 30px;
+    padding: 6px 32px;
+    background: royalblue; 
+    position: relative;
+    cursor: pointer;
+}
+.projectlistbutton:hover {
+    background-color: lightslategray; 
+    color: black;
+}
+
+.projectl1:hover,.projectl1:active
+{   
+    text-decoration: none;
+    color: royalblue;
+    border: 0px;
+    /* text-shadow: 0 1px rgba(0,0,0,0.3); */
+    background: silver;
+    font-size: 20px;
+    font-weight: bold;
+}
+ ul{
+     padding-left: 17px;
+ }
+ #save_project{
+    border: 0px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    width: 98%;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    height: 25px;
+    padding: 0 10px;
+    background: royalblue; 
+    position: relative;
+}
+#delete_project{
+    border: 0px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    width: 98%;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    height: 25px;
+    padding: 0 10px;
+    background: royalblue; 
+    position: relative;
+}
+
+
+#Info
+{
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 200px;
+    font-size: 16px;
+    width: 275px;   
+    border: 25px solid royalblue;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #d9d9d9;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    z-index: 1;
+    border-radius: 7px;
+    color: rgb(60, 66, 102);
+    position: relative;
+    
+}
+
+.price_d{
+    margin-left: 56%;
+}
+
+.Project_details
+{
+    margin: auto;
+    width: 250px;
+    border: 25px solid royalblue;
+    padding-top: 0px;
+    padding-left: 5px;
+    background-color: #d9d9d9;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    z-index: 1;
+    border-radius: 7px;
+    color: darkslategray;
+    position: relative;
+    
+}
+
+textarea {
+    width: auto;
+  }
+
+  #start_date{
+      width: auto;
+  }
+
+ /* @media (max-width: 500px) {
+    #login_form {
+        width: auto;
+    }
+   
+    #Sign_up_form {
+        width: auto;
+    }
+}  */
+
+/* @media (max-width: 800px) and (min-width: 501px) {
+   
+} */
+
+/* @media (min-width: 800px) {
+    #login_form {
+       
+        width: 350px;
+       
+    }
+   
+}
+ */ 
+/* Laptop and Desktop------------- */
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* Force table to not be like tables anymore */
+     table, thead, tbody, th, td, tr { 
+        display: block; 
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+       thead tr { 
+           position: absolute;
+           top: -9999px;
+           left: -9999px;
+       }
+       #data_table td { 
+           /* Behave  like a "row" */
+           border: none;
+           border-bottom: 1px solid #eee; 
+           position: relative;
+           padding-left: 50%; 
+       }
+       #data_table_e td { 
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 50%; 
+    }
+       #data_table td:before { 
+           /* Now like a table header */
+           position: absolute;
+           /* Top/left values mimic padding */
+           top: 6px;
+           left: 6px;
+           width: 45%; 
+           padding-right: 10px; 
+           white-space: nowrap;
+       }
+       #data_table_e td:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+    }
+       /*
+       Label the data
+       */
+       #data_table td:nth-of-type(1):before { content: "Material Name"; }
+       #data_table td:nth-of-type(2):before { content: "Description"; }
+       #data_table td:nth-of-type(3):before { content: "Unit Cost"; }
+       #data_table td:nth-of-type(4):before { content: "In Stock"; }
+       #data_table td:nth-of-type(5):before { content: "Discount(%)"; }
+       #data_table td:nth-of-type(6):before { content: "Discount Quantity"; }
+       #data_table_e td:nth-of-type(1):before { content: "Material Name"; }
+       #data_table_e td:nth-of-type(2):before { content: "Quantity"; }
+       #data_table_e td:nth-of-type(3):before { content: "Vendor Name"; }
+       #data_table_e td:nth-of-type(4):before { content: "Unit Price"; }
+       #data_table_e td:nth-of-type(5):before { content: "Price"; }
+       /* #data_table_e td:nth-of-type(6):before { content: "Details"; } */
+       #add_item
+       {
+          
+           width: auto;
+           text-align: auto;
+          
+       }
+       #login_form {
+           width: 300px; 
+          
+       } 
+       header
+       {
+           /* position: relative; */
+           margin: -25px;
+       }
+       #footer_text{
+        position: relative
+    }
+   }
+   
+    /* Smartphones (portrait and landscape) ----------- */
+	@media only screen
+    and (min-device-width: 375px) 
+    and (max-device-width: 667px) 
+     {
+		 /* Force table to not be like tables anymore */
+         data_table, table, table-entry, table-heading, thead, tbody, th, td, tr { 
+            display: block; 
+        }
+        /* Hide table headers (but not display: none;, for accessibility) */
+        #data_table td { 
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee; 
+            position: relative;
+            padding-left: 50%; 
+        }
+        #data_table_e td { 
+         /* Behave  like a "row" */
+         border: none;
+         border-bottom: 1px solid #eee; 
+         position: relative;
+         padding-left: 50%; 
+     }
+        #data_table td:before { 
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%; 
+            padding-right: 10px; 
+            white-space: nowrap;
+        }
+        #data_table_e td:before { 
+         /* Now like a table header */
+         position: absolute;
+         /* Top/left values mimic padding */
+         top: 6px;
+         left: 6px;
+         width: 45%; 
+         padding-right: 10px; 
+         white-space: nowrap;
+     }
+        /*
+        Label the data
+        */
+        #data_table td:nth-of-type(1):before { content: "Material Name"; }
+        #data_table td:nth-of-type(2):before { content: "Description"; }
+        #data_table td:nth-of-type(3):before { content: "Unit Cost"; }
+        #data_table td:nth-of-type(4):before { content: "In Stock"; }
+        #data_table td:nth-of-type(5):before { content: "Discount(%)"; }
+        #data_table td:nth-of-type(6):before { content: "Discount Quantity"; }
+        #data_table_e td:nth-of-type(1):before { content: "Material Name"; }
+        #data_table_e td:nth-of-type(2):before { content: "Quantity"; }
+        #data_table_e td:nth-of-type(3):before { content: "Vendor Name"; }
+        #data_table_e td:nth-of-type(4):before { content: "Unit Price"; }
+        #data_table_e td:nth-of-type(5):before { content: "Price"; }
+
+           #add_item
+           {
+               width: auto;
+               text-align: auto;  
+           }
+           #login_form {
+            width: 500px; 
+            height: 400px;
+             } 
+             h1{
+             font-weight: 200;
+             text-align: auto;
+             font-size: 6.0em;
+             padding-top: 50px;
+             font-weight: bold;
+            }
+            h2{  
+            font-weight: bolder;
+            text-align: center;
+            font-size: 4.0em;
+            }
+            form{
+            margin-right: 0px 27px;
+            }
+            
+        }
+    
+    @media print { 
+        /* All your print styles go here */
+         footer, .e_details{ 
+            
+            display: none; 
+        } 
+        #data_table_e  #row, .edit,.Edit, .save, .delete, .hide_for_print, .e_details_left{ 
+            
+            display: none; 
+        }
+        #data_table  #row, .edit,.Edit, .save, .Delete, .e_details{ 
+            
+            display: none; 
+        } 
+        #estimator_info{
+            width:50%;
+        }
+       }
+        
+     
+/* Section eight*/
+        /* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+                body { 
+                        width: 495px; 
+                }
+        } */
+
+
+        .last_th{
+            background-color: transparent;
+        }
+        
