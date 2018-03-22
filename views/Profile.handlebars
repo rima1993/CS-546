@@ -1,0 +1,102 @@
+<a href ="/">Go Back To Home</a>
+<form action="/profile" id="profile_table" method="post">
+
+    <div>
+        <input type="button" value="Change User Details" onclick="changeuserdetails()" id="userdetails" disabled>
+        <input type="button" value="Change Password" onclick="changePassword()" id="change_password">
+
+
+        <table id="details_table">
+            <tr>
+                <td>
+                    <label>First Name:</label>
+                </td>
+                <td>
+                    <input type="text" id="edit_firstname" aria-label="First Name" name="edit_firstname" pattern="^[a-zA-Z ]+$" value="{{{obj.FN}}}">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label>Last Name:</label>
+                </td>
+                <td>
+                    <input type="text" id="edit_lastname" aria-label="First Name" name="edit_lastname" pattern="^[a-zA-Z ]+$" value="{{{obj.LN}}}">
+                </td>
+
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label>Postal Code:</label>
+                </td>
+                <td>
+                    <input type="text" id="edit_zip" name="edit_zip" aria-label = "Zip" pattern="(\d{5}([\-]\d{4})?)" value="{{{obj.ZP}}}">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label>Contact No:</label>
+                </td>
+                <td>
+                    <input type="text" id="edit_mobileno" name="edit_mobileno" aria-label="Mobile No" pattern="\d{3}[\-]\d{3}[\-]\d{4}|\d{10}" value="{{{obj.PH}}}">
+                </td>
+
+            </tr>
+
+
+        </table>
+
+        <table id="password_table" style="display: none">
+            <tr>
+                <td>
+                    <label>New Password:</label>
+                </td>
+                <td>
+                    <input type="text" id="edit_password" name="edit_password" aria-label="New Password" pattern="^[a-zA-Z0-9]+$" value="{{{obj.PD}}}" minlength="6" maxlength="16">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label>Confirm Password:</label>
+                </td>
+                <td>
+                    <input type="text" id="edit_confirmpassword" name="edit_confirmpassword" aria-label="Confirm Password" pattern="^[a-zA-Z0-9]+$"
+                        value="{{{obj.PD}}}" minlength="6" maxlength="16">
+                </td>
+
+            </tr>
+
+
+        </table>
+
+        {{!--
+        <input type="submit" value="Update"> --}}
+
+        <button>Submit</button>
+        {{!--
+        <onclick="return Validate()" /> --}}
+</div>
+</form>
+
+<script>
+    function changeuserdetails() {
+        document.getElementById("password_table").style.display = "none";
+        document.getElementById("details_table").style.display = "block";
+        document.getElementById("userdetails").disabled = true;
+        document.getElementById("change_password").disabled = false;
+
+
+    }
+
+    function changePassword() {
+        document.getElementById("password_table").style.display = "block";
+        document.getElementById("details_table").style.display = "none";
+        document.getElementById("change_password").disabled = true;
+        document.getElementById("userdetails").disabled = false;
+
+    }
+</script>

@@ -1,0 +1,44 @@
+<script>
+        function checkForm(){
+    var email = document.getElementById('em');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    
+    if (!filter.test(email.value)) {
+    alert('Please provide a valid email address');
+    email.focus;
+    return false;
+}
+
+    var password = document.getElementById("pwd").value;
+    var confirmPassword = document.getElementById("cp").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+}
+</script>
+<div id="Sign_up_form" >
+    <h2>Sign Up</h2>
+    <form action="/signup" method="post">
+        <input type="text" name="email" id="em" required placeholder="Email" aria-label ="Email" pattern = "^[a-zA-Z0-9\.@-_]+$"><br>
+        <input type="password" name="password" id="pwd" pattern= "^[a-zA-Z0-9]+$" required placeholder="Password" aria-label ="Password" title="Password must contain contain only Uppercase, Lowercase or Number" minlength="6" maxlength="16"><br>
+        <input type="password" name="confirm_password" id="cp" pattern= "^[a-zA-Z0-9]+$" required placeholder="Confirm Password" aria-label="Confirm Password" title="Password must contain contain only Uppercase, Lowercase or Number" minlength="6" maxlength="16"><br>
+        <input type="text" name="firstname" id="fn" required placeholder="First Name" aria-label="First Name" pattern="^[a-zA-Z ]+$" title="FirstName should only contain letters and length should not more than 32 character " minlength="1" maxlength="32">
+        <input type="text" name="lastname" id="ln" required placeholder="Last Name" aria-label ="Last Name" pattern="^[a-zA-Z ]+$" title="LastName should only contain letters and length should be 32 character " minlength="1" maxlength="32"><br>
+        <input type="text" name="companyname" id="un" required placeholder="Company Name" aria-label ="Company Name" pattern="^[a-zA-Z0-9\. ]+$" title="Username length should be 20 character" minlength="1" maxlength="20"><br>
+        <input type="text" name="zip" id="zc" pattern= "(\d{5}([\-]\d{4})?)" required placeholder="Zip" aria-label ="Zip" title="Zip should be in 00000 or 00000-0000 format"><br>
+        <input type="tel" name="contact" id="cn" pattern="(\d{3}[\-]\d{3}[\-]\d{4}|\d{10})" required placeholder="Mobile No" aria-label ="Mobile No" title="Contact must be in 000-000-0000 format"><br>
+        <div>
+            <input type="radio" name="User_type" value="Vendor" aria-label="Vendor" id="vsignup" > Vendor
+            <input type="radio" name="User_type" value="Estimator" aria-label="Estimator" id="esignup"> Estimator<br>
+        </div>
+        {{#if message }}
+      <div>
+          {{ message }}
+        </div>
+      {{/if}}
+        <input type="submit" value="Sign Up"  id="signup_button" onClick="checkForm()">
+        Already have a Account? <a href="/" id="new_account"> Log In</a>
+    </form>
+</div>

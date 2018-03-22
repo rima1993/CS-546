@@ -1,0 +1,53 @@
+<a href ="/">Go Back To Home</a>
+<form action="/projectInfo" id="Info" method="post">
+<h2>{{#if obj.isEdit}} Edit Project Information {{else}} New Project {{/if}}</h2>
+ 
+
+    <table>
+        <tr>
+            <td>
+                <label>Project Name:</label>
+            </td>
+            <td>
+                <input type="text" name="project_name" id="project_name" aria-label="Project Name" pattern="[A-Za-z1-9\s]{1,100}" value="{{{obj.PN}}}"{{#if obj.isEdit}} class="inputText_d"  {{/if}} >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Owner:</label>
+            </td>
+            <td>
+                <input type="text" name="owner_name" id="owner_name" aria-label="Owner" pattern="[a-zA-Z0-9\s'-]+" value="{{{obj.ON}}}" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Start Date:</label>
+            </td>
+            <td>
+                <input type="date" name="start_date" aria-label="Start Date" id="start_date" value="{{{obj.SD}}}" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Due Duration:</label>
+            </td>
+            <td>
+                <input type="text" name="due_date" id="due_date" aria-label="Due Duration" pattern="[a-zA-Z0-9\s.]+" value="{{{obj.DD}}}" required>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label>Description:</label>
+            </td>
+            <td>
+                <input type="text" name="project_description" id="project_description" aria-label="Project Description" pattern="[a-zA-Z0-9\s'-]+" required value="{{{obj.PDE}}}" >   
+                {{!-- <textarea name="project_description" id="project_description" aria-label="Project Description" pattern="[a-zA-Z0-9\s]|[0-9]+([\.,][0-9]+)?+" required>{{{obj.PDE}}}</textarea> --}}
+
+            </td>
+        </tr>
+    </table>
+    <input type="submit" {{#if obj.isEdit}} value="Update" name = "update_project" {{else}} value="Save"  name = "save_project"{{/if}} id="save_project" /> 
+    {{#if obj.isEdit}}<input type="submit" value="Delete Project"  name="delete_project" id="delete_project"> {{else}} {{/if}}
+</form>

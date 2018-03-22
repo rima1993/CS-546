@@ -1,0 +1,69 @@
+<script src="../public/js/table_script.js"></script>
+<div class="vendor_info">
+    <label id="vendor_name">{{user.userName}}</label><br>
+    <label class="hide_for_print">{{user.firstName}} {{user.lastName}}</label>
+    <br>
+    <a href="/profile" class= "e_details">Edit profile</a>
+    <a href="/logout" class="hide_for_print">Logout</a>
+</div>
+<br><br>
+<br>
+<div id="wrapper">
+    <table  id="data_table">
+        <thead>
+            <tr id="table-heading">
+                <th>Material Name</th>
+                <th>Description</th>
+                <th>Unit Cost</th>
+                <th>In Stock</th>
+                <th>Discount(%)</th>
+                <th>Discount Quantity</th>
+                <th class = "last_th"></th>
+            </tr>
+        </thead>
+        <tbody id="table-entry">
+            {{#each user.materials}}
+            <tr id="row{{@index}}">
+                <td id="name{{@index}}">{{name}}</td>
+                <td id="description{{@index}}">{{description}}</td>
+                <td id="unitCost{{@index}}">{{unitCost}}</td>
+                <td id="inStock{{@index}}">{{inStock}}</td>
+                <td id="discount{{@index}}">{{discount}}</td>
+                <td id="discountQty{{@index}}">{{discountQty}}</td>
+                <td>
+                    <input type="button" id="edit_button{{@index}}" value=" Edit " class="edit" onclick="edit_row({{@index}})">
+                    <input type="button" id="save_button{{@index}}" value="Save" class="save" onclick="save_row({{@index}})" style="display: none;">
+                    <input type="button" value="Delete" class="Delete" onclick="delete_row({{@index}})">
+                </td>
+            </tr>
+            {{/each}}
+            <tr id="row">
+                <td>
+                    <input type="text" id="name" aria-label="Name" placeholder="Material name" pattern="[A-Za-z0-9]" required>
+                </td>
+                <td>
+                    <input type="text" id="description" aria-label="Description" placeholder="Description" pattern="[A-Za-z0-9]"
+                        required>
+                </td>
+                <td>
+                    <input type="number" id="unitCost" aria-label="UnitCost" placeholder="Unit Cost" value="0" min="0" max="999999">
+                </td>
+                <td>
+                    <input type="number" id="inStock" aria-label="InStock" placeholder="In Stock" value="0" min="0" max="999999">
+                </td>
+                <td>
+                    <input type="number" id="discount" aria-label="Discount" placeholder="Discount(%)" value="0" min="0" max="100">
+                </td>
+                <td>
+                    <input type="number" id="discountQty" aria-label="Discount Quantity" placeholder="Discount Quantity" value="0"
+                        min="0" max="999999">
+                </td>
+                <td>
+                    <input type="button" class="add" onclick="add_row();" value="Add Material" id="add_item">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <div id="comment-box"></div>
+</div>

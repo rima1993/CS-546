@@ -1,0 +1,17 @@
+<div class= "pList_menu">
+    <label id="vendor_name">{{user.userName}} <br> {{user.firstName}}  {{user.lastName}}</label><br>
+    <a href="/profile">Edit profile</a>&nbsp;
+    <a href="/logout">Logout</a>
+</div><br><br><br>
+<form method = "POST" action = "/projectLists" class = "list" >
+<label class ="project_list">My Projects</label><br/>
+
+<ul>
+{{#each myProjectsList}}
+<li><input type = "submit" value="{{PN}}" name="pname" class="projectl1"/><br/><br></li>
+{{/each}}
+</ul>
+<div>
+    <input type="submit" name = "add_project" value="Add projects" class="projectlistbutton">
+</div>
+</form>
