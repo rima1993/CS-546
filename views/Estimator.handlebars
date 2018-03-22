@@ -1,0 +1,68 @@
+<script src="../public/js/table_script_estimator.js"></script>
+<form method="post" >
+    <input type="submit" name="home_page_e_link" value="Go Back to My Projects" class="e_details_left">
+    <div class="e_details_right"> <label id="estimator_name" >{{userI.userName}}</label><br>
+     <input type="submit" name="edit_project" class="e_details" value="Edit Project Detais" >
+    <a href="/logout" class="hide_for_print">Logout</a></div><br/><br/>
+<div id="estimator_info"> 
+    <label>Project Name:</label><input type="text" value="{{user.pName}}" name="pName" id="pName" class="inputText_d_e" aria-label="Project Name"  disabled><br>
+     <label>Owner:</label><input type="text" value="{{user.owner}}" name="owner" id="owner" class="inputText_d_e" aria-label="Owner"  disabled><br>
+    <label>Start Date:</label><input type="text" value="{{user.startDate}}" name="startDate" id="startDate" class="inputText_d_e" aria-label="Start Date" disabled><br>
+    <label>Due Duration:</label><input type="text" value="{{user.due}}" name="due" id="due" class="inputText_d_e"  aria-label="Due Date"  disabled><br>
+   <label>Description:</label><br><textarea  name="description" id="description" class="inputTextArea_d_e"  aria-label="Description"  disabled>{{user.description}}</textarea><br>
+   </div>
+<br>
+</form>
+<br>
+<div id="wrapper">
+    <table id="data_table_e">
+        <thead>
+        <tr id="table-heading">
+            <th>Material</th>
+            <th>Quantity</th>
+            <th>Vendor Name</th>
+            <th>Unit Price</th>
+            <th>Price</th>
+            <th class = "last_th"></th>
+            <th class = "last_th"></th>
+            
+
+        </tr>
+        </thead>
+        <tbody id="table-entry">
+        {{#each user.materials}}
+        <tr id="row{{@index}}">
+            <td id="mName{{@index}}">{{mName}}</td>
+            <td id="qty{{@index}}" onchange="editpriceCal({{@index}})">{{qty}}</td>
+            <td id="vValue{{@index}}">{{vName}}</td>
+            <td id="unitcost{{@index}}">{{unitCost}}</td>
+            <td id="price{{@index}}">
+                {{#gte (subtract qty discountQty) 0}}
+                {{divide ( multiply (multiply qty unitCost) (subtract 100 discount)) 100 }}
+                {{else}}
+                {{multiply qty unitCost}}
+                {{/gte}}
+                </td>
+            <td><input class="e_details" type="button" id="details{{@index}}" value="Details" onclick="detalis({{@index}})"></td>
+            <td><input type="button" id="edit_button{{@index}}" value="Edit" class="edit" onclick="edit_row({{@index}})"> 
+            <input type="button" id="save_button{{@index}}" value="Save" class="save" onclick="save_row({{@index}})" style="display: none;"> 
+            <input type="button" value="Delete" class="delete" onclick="delete_row({{@index}})"></td>
+        </tr>
+        {{/each}}
+        <tr id="row">
+            <td><input type="text" id="mName" aria-label="Material Name"></td>
+            <td><input type="number" id="qty" aria-label="Quantity" onchange="vValue()"></td>
+            <td><select id="vValue" onchange="vChange()"><option value="0" id="vName">Other Vendor</option></select></td>
+            <td><input type="number" id="unitcost" aria-label="Unit Price" value="0" onchange="otherUnit()"></td>
+            <td><label id="price">0</label></td>
+            <td></td>
+            <td>
+                <input type="button" class="add" onclick="add_row();" value="Add Material" id="add_item">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="price_d"><label>Total Estimation: </label><label id="total-cost"  onloadstart="totalCost()" >0</label></div>
+    
+    <div id="comment-box"></div>
+</div>
