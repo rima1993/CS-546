@@ -1,0 +1,27 @@
+{
+  "name": "construction_project_post_estimation",
+  "version": "1.0.0",
+  "description": "CS 546 Fall 2017 Final project by team pirates of the web",
+  "main": "",
+  "scripts": {
+    "start": "node app.js",
+    "seed": "node seed.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brijesh Makani, Charmi Bhikadiya, Maulik Jajal, Megh Vankawala, Rimaben Patel",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "handlebars-helpers": "^0.10.0",
+    "mongodb": "^2.2.5",
+    "node-uuid": "^1.4.8",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "util": "^0.10.3"
+  }
+}
